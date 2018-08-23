@@ -1,10 +1,12 @@
- // Declarative rendering     
- var app = new Vue(
+
+// Declarative rendering     
+ 
+var app = new Vue(
     {
         el: '#app',
         data: 
         {
-            message :' helllo man' 
+            message :' Welcome to vue Js' 
         }
     }
 );
@@ -16,6 +18,7 @@ var app2 = new Vue({
       message: 'You loaded this page on ' + new Date().toLocaleString()
     }
   })
+
 // conditionals (v-if) and loops (v-for)
 var app3 = new Vue(
   {
@@ -93,3 +96,46 @@ Vue.component('todo-item', {
       ]
     }
   })
+
+  /**
+
+  Vue.prototype.$http = axios
+
+  var app8 = new Vue({
+    el: '#app-8',
+    data: {
+      users: []
+    },
+    created () {
+      var vm = this
+      this.$http.get('http://localhost:8000/test')
+        .then(function (response) {
+          vm.users = response.data
+        })
+    }
+  })
+
+   */
+ 
+
+
+/**
+ *   Dom with $ref 
+ */
+
+var app9 = new Vue({
+	el: '#app9',
+	data: {
+		message: 'Hello World!'
+	},
+	methods: {
+		 clickedButton: function() {
+      
+        this.$refs.message.innerText="This the message";
+        this.$refs.myButton.innerText=this.message;
+
+        console.log(this.$refs.message);
+
+      },  
+	}
+});
