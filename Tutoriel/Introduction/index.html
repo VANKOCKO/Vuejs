@@ -41,13 +41,19 @@
         <!-- app5 -->
         <div id="app-5">
             
+             <h3>Renverser</h3>
              <p>{{message}}</p>
              <button v-on:click="reverseMessage">Renverser</button>
+             <h3>change title</h3>
+             <input type="text" v-on:input="ChangerTitre">
+             <p>{{title}}</p>
+
+              
         </div>
          <!-- app6 -->
          <div id="app-6">
             
-            <input v-model ="message">
+            <input v-model ="message"> 
             <p>{{message}}</p>
        </div>
        
@@ -78,6 +84,8 @@
             </ul>
           </div>
         -->
+
+        <h3>Interactive avec le DOM </h3>
          
           <div id="app9">
                        <h1 ref="message">{{message}}</h1>

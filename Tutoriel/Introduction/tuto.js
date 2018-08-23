@@ -52,12 +52,15 @@ var app5 = new Vue(
       data : 
       {
           message : 'hello Vue.js!' ,
-         
+          title:"Titre changer"
       },
       methods: {
        reverseMessage : function()
        {
            this.message = this.message.split('').reverse().join('')
+       },
+       ChangerTitre : function(event){
+         this.title = event.target.value;  
        }
 
       }
